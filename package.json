@@ -35,7 +35,6 @@
     ]
   },
   "dependencies": {
-    "pty.js": "git+https://github.com/microsoft/node-pty.git#1.0.0",
     "term.js": "^0.0.7"
   }
 }
