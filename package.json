@@ -35,13 +35,7 @@
     ]
   },
   "dependencies": {
-    "pty.js": "^1.0.0",
+    "pty.js": "git+https://github.com/microsoft/node-pty.git#1.0.0",
     "term.js": "^0.0.7"
-  },
-  "resolutions": {
-    "nan": "github:tec27/nan#remove_accessor_signature"
-  },
-  "overrides": {
-    "nan": "github:tec27/nan#remove_accessor_signature"
   }
 }
