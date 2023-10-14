@@ -2,7 +2,7 @@
 
 A curses-like library with a high level terminal interface API for node.js.
 
-**This blessed fork is patched to include (admittedly hacky) [truecolor methods](#truecolor)**
+**This blessed fork is patched to include (admittedly hacky) [truecolor methods](#truecolor-full-rgb)**
 
 ![blessed](https://raw.githubusercontent.com/chjj/blessed/master/img/v0.1.0-3.gif)
 
