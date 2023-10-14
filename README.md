@@ -2,6 +2,8 @@
 
 A curses-like library with a high level terminal interface API for node.js.
 
+**This blessed fork is patched to include (admittedly hacky) [truecolor methods](#truecolor)**
+
 ![blessed](https://raw.githubusercontent.com/chjj/blessed/master/img/v0.1.0-3.gif)
 
 Blessed is over 16,000 lines of code and terminal goodness. It's completely
@@ -120,6 +122,19 @@ screen.render();
 ```
 
 ## Documentation
+
+### Truecolor (full rgb)
+#### Element
+##### Options
+- __truec__ - An object with 3 values (R, G, and B) specifying the RGB background color for the element
+#### Screen
+##### Methods
+- __addColorElem(elem)__ - Register an element for truecolor rendering, or update color values (run **after** appended to screen)
+- __removeColorElem(elem)__ - **RUN BEFORE RESIZING/DELETING ELEMENT**, otherwise bad things will happen, as colors are seperate from elements, and will persist
+#### Notes
+This patch is not reccomended until I or someone else updates it.
+It works by adding coordinates of colored pixels to a map, kept completely seperate from elements, and adding color during render.
+This will break when elements are deleted or resized, as well as a terminal resize.
 
 ### Widgets
 

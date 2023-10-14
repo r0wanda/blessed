@@ -14,6 +14,11 @@ var box = blessed.box({
   border: {
     type: 'line'
   },
+  truec: {
+    r: 180,
+    g: 110,
+    b: 60
+  },
   style: {
     fg: 'white',
     bg: 'magenta',
@@ -25,10 +30,9 @@ var box = blessed.box({
     }
   }
 });
-
 // Append our box to the screen.
 screen.append(box);
-
+screen.addColorElem(box);
 // If our box is clicked, change the content.
 box.on('click', function(data) {
   box.setContent('{center}Some different {red-fg}content{/red-fg}.{/center}');
